@@ -74,10 +74,10 @@ handling for resets and billing, and modular, well-documented Laravel code.</p>
     </li>
     <li><strong>Step 4:</strong> Install project dependencies:<br><code>composer install</code> or <code>composer update</code></li>
     <li><strong>Step 5:</strong> Ensure the <code>vendor/</code> folder is created successfully.</li>
-    <li><strong>Step 6:</strong> Make sure the database <code>2hats</code> exists in your DB server.</li>
+    <li><strong>Step 6:</strong> Make sure the database <code>appstation</code> exists in your DB server.</li>
     <li><strong>Step 7:</strong> Run migration to create tables:<br><code>php artisan migrate</code></li>
     <li><strong>Step 8:</strong> Run seeders to populate initial data:<br><code>php artisan db:seed --class=SubscriptionTierSeeder</code></li>
-    <li><strong>Step 9:</strong> (Optional) Generate Sanctum keys:<br><code>php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"</code></li>
+    <li><strong>Step 9:</strong> Generate Sanctum keys:<br><code>php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"</code></li>
     <li><strong>Step 10:</strong> Start the application:<br><code>php artisan serve</code></li>
     <li><strong>Step 11:</strong> Create the queue table:<br><code>php artisan queue:table && php artisan migrate</code></li>
     <li><strong>Step 12:</strong> Start queue worker in a separate terminal:<br><code>php artisan queue:work</code></li>
