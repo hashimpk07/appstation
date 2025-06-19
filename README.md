@@ -60,14 +60,14 @@ handling for resets and billing, and modular, well-documented Laravel code.</p>
 
 <h2 style="font-weight: bold;">How to Execute the Project</h2>
 <ul>
-    <li><strong>Step 1:</strong> Clone the project:<br><code>git clone https://github.com/hashimpk07/twoHatslogic.git</code></li>
+    <li><strong>Step 1:</strong> Clone the project:<br><code>git clone https://github.com/hashimpk07/appstation.git</code></li>
     <li><strong>Step 2:</strong> Create a <code>.env</code> file from <code>.env.example</code>:</li>
     <li><strong>Step 3:</strong> Update the <code>.env</code> file with the following DB settings:<br>
         <code>
             DB_CONNECTION=mysql<br>
             DB_HOST=127.0.0.1<br>
             DB_PORT=3306<br>
-            DB_DATABASE=2hats<br>
+            DB_DATABASE=appstation<br>
             DB_USERNAME=root<br>
             DB_PASSWORD=
         </code>
@@ -79,9 +79,67 @@ handling for resets and billing, and modular, well-documented Laravel code.</p>
     <li><strong>Step 8:</strong> Run seeders to populate initial data:<br><code>php artisan db:seed --class=SubscriptionTierSeeder</code></li>
     <li><strong>Step 9:</strong> Generate Sanctum keys:<br><code>php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"</code></li>
     <li><strong>Step 10:</strong> Start the application:<br><code>php artisan serve</code></li>
-    <li><strong>Step 11:</strong> Create the queue table:<br><code>php artisan queue:table && php artisan migrate</code></li>
-    <li><strong>Step 12:</strong> Start queue worker in a separate terminal:<br><code>php artisan queue:work</code></li>
-    <li><strong>Step 13:</strong> Run the scheduler manually (or use cron):<br><code>php artisan schedule:run</code></li>
-    <li><strong>Step 14:</strong> Open the served URL in your browser (usually http://127.0.0.1:8000).</li>
+    <li><strong>Step 11:</strong> Proper .env configuration including <code>  QUEUE_CONNECTION=database</code></li>
+    <li><strong>Step 12:</strong> Create the queue table:<br><code>php artisan queue:table && php artisan migrate</code></li>
+    <li><strong>Step 13:</strong> Start queue worker in a separate terminal:<br><code>php artisan queue:work</code></li>
+    <li><strong>Step 14:</strong> Run the scheduler manually (or use cron):<br><code>php artisan schedule:run</code></li>
+    <li><strong>Step 15:</strong> Open the served URL in your browser (usually http://127.0.0.1:8000).</li>
 </ul>
+
+
+<h2 style="font-weight: bold;">Available API Endpoints</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Endpoint</th>
+      <th>Description</th>
+      <th>Authentication</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>POST</td>
+      <td><code>/api/register</code></td>
+      <td>Register a new user and return token</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td><code>/api/login</code></td>
+      <td>Login and return Sanctum token</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td><code>/api/data</code></td>
+      <td>Sample protected API endpoint (rate-limited)</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td><code>/api/key</code></td>
+      <td>Return user's current API token info</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td><code>/api/usage</code></td>
+      <td>Return current day's and month’s API usage</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td><code>/api/billing</code></td>
+      <td>Return billing history (only for premium users)</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td><code>/api/admin/set-tier</code></td>
+      <td>Admin endpoint to set user's subscription tier</td>
+      <td>Yes </td>
+    </tr>
+  </tbody>
+</table>
    
