@@ -82,7 +82,7 @@ handling for resets and billing, and modular, well-documented Laravel code.</p>
     <li><strong>Step 11:</strong> Proper .env configuration including <code>  QUEUE_CONNECTION=database</code></li>
     <li><strong>Step 12:</strong> Create the queue table:<br><code>php artisan queue:table && php artisan migrate</code></li>
     <li><strong>Step 13:</strong> Start queue worker in a separate terminal:<br><code>php artisan queue:work</code></li>
-    <li><strong>Step 14:</strong> Run the scheduler manually (or use cron):<br><code>php artisan schedule:run</code></li>
+    <li><strong>Step 14:</strong> Run the scheduler <br><code>php artisan schedule:run</code></li>
     <li><strong>Step 15:</strong> Open the served URL in your browser (usually http://127.0.0.1:8000).</li>
 </ul>
 
