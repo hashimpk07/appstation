@@ -2,7 +2,7 @@
 <ul>
     <li>Project Created By  : HASHIM PK  </li>
     <li>Project Created 0n  : 19/06/2025 to 19/06/2025 </li>
-    <li>Using Technology    : Laravel 10.48.16 , Mysq  </li>
+    <li>Using Technology    : Laravel 10.48.29 and Mysq  </li>
 </ul>
 
 
@@ -51,7 +51,7 @@ handling for resets and billing, and modular, well-documented Laravel code.</p>
 
 <h4>Technologies</h4>
 <ul>
-  <li>Laravel 10.4.8 Version.</li>
+  <li> Laravel 10.48.29  Version.</li>
   <li>Sanctum </li>
   <li>Mysql</li>
   <li> Laravel Queue (Mysql DB ) </li>
