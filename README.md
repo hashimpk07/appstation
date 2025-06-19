@@ -2,7 +2,7 @@
 <ul>
     <li>Project Created By  : HASHIM PK  </li>
     <li>Project Created 0n  : 19/06/2025 to 19/06/2025 </li>
-    <li>Using Technology    : Laravel 10.48.29 and Mysq  </li>
+    <li>Using Technology    : Laravel 10.48.29 and Mysql  </li>
 </ul>
 
 
