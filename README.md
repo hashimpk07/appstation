@@ -7,7 +7,7 @@
 
 
 <h2 style="font-weight: bold";>About Application</h2>
- <h4>PHP Machine Test : PHP Laravel Machine Test: API Rate Limiting &amp;
+ <h4> PHP Laravel Machine Test: API Rate Limiting &amp;
 Monetization Platform . </h4> <p>You are tasked with building the backend of a platform that offers public APIs to third-
 party developers. Each registered developer gets access to a set of APIs, but their
 usage is limited based on their subscription tier (free, standard, premium). The system
